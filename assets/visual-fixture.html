@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelMaker visual fixture</title>
+  <link rel="stylesheet" href="visual-kit.css">
+</head>
+<body>
+  <main class="tm-app">
+    <header class="tm-shell tm-topbar">
+      <span class="tm-brand-mark">TM</span>
+      <strong class="tm-brand-name">TRAVEL SITE</strong>
+      <span class="tm-topbar-spacer"></span>
+      <span class="tm-topbar-utility">旅途工具 ↗</span>
+      <select class="tm-mode-select" aria-label="畫面顯示模式"><option>自動顯示</option><option>精簡顯示</option><option>完整顯示</option></select>
+    </header>
+    <div class="tm-shell tm-page-head">
+      <p class="tm-eyebrow">TRIP FLOW</p>
+      <h1>行程</h1>
+    </div>
+    <section class="tm-shell">
+      <div class="tm-day-selector" role="tablist" aria-label="選擇旅程日期" style="--tm-day-count:7">
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 1</small><b class="tm-day-tab__date">05/01</b><span class="tm-day-tab__label">抵達・市區</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 2</small><b class="tm-day-tab__date">05/02</b><span class="tm-day-tab__label">老城・河岸</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 3</small><b class="tm-day-tab__date">05/03</b><span class="tm-day-tab__label">山區・小鎮</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 4</small><b class="tm-day-tab__date">05/04</b><span class="tm-day-tab__label">市場・藝文</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 5</small><b class="tm-day-tab__date">05/05</b><span class="tm-day-tab__label">海岸・散策</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="false"><small class="tm-day-tab__index">DAY 6</small><b class="tm-day-tab__date">05/06</b><span class="tm-day-tab__label">近郊・購物</span></button>
+        <button class="tm-day-tab" role="tab" aria-selected="true"><small class="tm-day-tab__index">DAY 7</small><b class="tm-day-tab__date">05/07</b><span class="tm-day-tab__label">返程</span></button>
+      </div>
+      <article class="tm-panel">
+        <div class="tm-today-head"><div><p class="tm-eyebrow">DAY 7 · 05/07</p><h2>返程</h2><p class="tm-muted">早餐 → 領取行李 → 前往機場</p></div><span class="tm-today-count">3</span></div>
+        <ol class="tm-stop-list">
+          <li class="tm-stop"><time>09:00</time><div><strong>早餐</strong><small>市區・步行前往</small></div><div class="tm-stop-actions"><a href="#">地圖</a></div></li>
+          <li class="tm-stop"><time>11:30</time><div><strong>領取行李</strong><small>出發前確認交通狀態</small></div><div class="tm-stop-actions"><a href="#">導航</a></div></li>
+        </ol>
+      </article>
+    </section>
+    <nav class="tm-bottom-nav" aria-label="旅途功能">
+      <button>即時</button><button aria-current="page">行程</button><button>訂位</button><button>清單</button><button>優惠</button><button>更多</button>
+    </nav>
+  </main>
+</body>
+</html>

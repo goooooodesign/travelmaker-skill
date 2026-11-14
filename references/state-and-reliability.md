@@ -6,6 +6,8 @@ Use these rules when a travel site stores shared data, fetches changing informat
 
 - Scope records to the authenticated trip or explicitly shared workspace. Do not infer that two visitors should share data merely because they opened the same public page.
 - Give mutable records stable IDs and server timestamps. For seeded lists, merge saved overrides onto defaults; use tombstones for deletion so removed presets do not reappear.
+- Apply later corrections to seeded itinerary content with a versioned, idempotent update. Match the exact seed ID and the expected original fields before replacing a stop; preserve a traveller's independent edit or restaurant choice. Never reset the whole saved plan to refresh one booking.
+- Keep confirmed booking state consistent across the plan, today's operational cards and booking queue. A content update should not silently change a traveller-managed status back to pending.
 - Reject forged owners, unknown traveller IDs, invalid categories, overlong text and malformed IDs at the server boundary.
 - If initial loading fails, keep the interface readable but disable writes that could overwrite unseen shared data. Offer a clear retry action.
 - Use local storage only for device preferences such as compact / travel mode. Cross-device itinerary notes, status, spending and lists belong in shared storage when collaboration is promised.

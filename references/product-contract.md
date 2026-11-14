@@ -1,19 +1,17 @@
 # Product contract
 
-Build only the modules useful to the traveller. Prefer a small permanent bottom navigation and route secondary tools through a “more” hub so the phone interface does not become a row of tiny tabs. The usual baseline is:
+For a new TravelMaker site, use [the current-site parity checklist](current-site-parity.md) by default unless the traveller asks for a simpler site. Keep the navigation stable while replacing destination-specific content. The reference has six fixed bottom destinations; route secondary tools through a “more” hub so the phone interface does not become a row of tiny tabs:
 
-1. **Home / now** — current trip state, today's plan, editable daily reminders, urgent action timeline, data freshness and route-risk check.
-2. **Itinerary** — daily selector with collapsed detailed blocks; each block carries time, place, transport, fallback, notes, map and current-location navigation.
-3. **Bookings / today** — before the trip, show the action timeline and restaurant / transport queue. During the trip, let the same primary destination become a focused “today” view; keep the full archive reachable from the more hub.
-4. **Weather** — destination-appropriate official forecast with source, refreshed timestamp and confidence if published.
-5. **Preparation lists** — separate traveller profiles and luggage / shopping subviews, editable categories, completion filters and optional shopping-reference photos.
-6. **More** — weather, integrated safety alerts, rescue and an offline handbook. Keep these available without occupying the permanent navigation.
+1. **即時 / now** — current trip state, prioritized action, today's plan, editable daily reminders, urgent action timeline, safety / weather freshness and route-risk check.
+2. **行程 / itinerary** — pre-trip reminders, a collapsible wishlist, day selector and per-stop blocks with time, place, transport, fallback, notes, map and current-location navigation; shared editing when requested.
+3. **訂位 / 今天** — before the trip, an action-date-sorted restaurant / transport queue with status filters and departure checklist; during the trip, a focused “today” view with the full archive reachable.
+4. **清單 / lists** — separate traveller profiles and luggage / shopping subviews, categories, completion filters and optional shopping-reference photos.
+5. **優惠 / offers** — shopping offers, eligible-card / cross-border-payment comparison and a distinct spend ledger. On a new trip, show setup states until relevant traveller products and local offers are known.
+6. **更多 / more** — official forecast, integrated safety, rescue and an offline handbook. Keep these available without occupying the permanent navigation.
 
-Add only on request or when materially useful:
+Add or adapt when relevant to the destination and traveller:
 
-- Shopping / tax-free / department-store offers.
-- Payment-card and local-wallet comparison with spend tracking.
-- A dedicated editable spend-record view, separate from payment recommendations.
+- A contextual tax-refund guide, with an in-site explanation and official sources.
 - Shared expenses.
 - Transport passes, airport transfer and flight tracking.
 
@@ -22,6 +20,7 @@ For every dynamic module, display one of: `已更新`, `待確認`, `預估`, or
 ## Lifecycle contract
 
 - **Planning:** bookings and deadlines are prominent; itinerary detail is available but collapsed.
+- **Display preference:** offer `自動顯示`, `精簡顯示` and `完整顯示` when the product has enough content to justify them. Automatic mode follows the trip lifecycle; compact and full modes are explicit user choices and should persist on that device. Never hide the full record permanently when compact mode is selected.
 - **Departure preparation:** surface check-in, transport, eSIM, packing, shopping and offline-download tasks.
 - **During the trip:** prioritize today's route, reminders, weather, active alerts, current-location navigation and items that must be presented to staff. Replace the primary booking entry with “today” when useful, but retain the historical booking archive.
 - **After the trip:** do not delete user data automatically. A future archival mode may reduce navigation prominence, but destructive cleanup requires explicit authorization.
